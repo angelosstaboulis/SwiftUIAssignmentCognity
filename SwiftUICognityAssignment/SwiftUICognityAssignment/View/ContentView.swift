@@ -12,8 +12,6 @@ struct ContentView: View {
     @StateObject var helper = Helper()
     @State var onLinelist:[SHOWModel] = []
     @ObservedObject var viewModel = SHOWViewModel()
-    @ObservedObject
-    var dbManager = DBManager()
     var body: some View {
         NavigationView{
             List(self.onLinelist){ show in
@@ -28,9 +26,7 @@ struct ContentView: View {
                             viewModel.insertRecord(dbStruct:DBStruct(name: self.onLinelist[item].name!, ratings: self.onLinelist[item].rating!, thumb: self.onLinelist[item].thumbnail!))
                             
                         }
-                    }
-                    debugPrint("count=",viewModel.fetchRecords())
-                  
+                    }                  
                 }else{
                     let shows = Array(viewModel.fetchRecords())
                     for item in 0..<shows.count {

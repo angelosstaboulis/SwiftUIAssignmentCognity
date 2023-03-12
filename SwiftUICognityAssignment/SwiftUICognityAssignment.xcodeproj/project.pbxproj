@@ -26,7 +26,6 @@
 		D6B788D929BB288E00A41AE2 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D6B788D829BB288E00A41AE2 /* SDWebImageSwiftUI */; };
 		D6B788DB29BB298E00A41AE2 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B788DA29BB298E00A41AE2 /* DetailsView.swift */; };
 		D6B788DD29BB2B1A00A41AE2 /* CellRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B788DC29BB2B1A00A41AE2 /* CellRow.swift */; };
-		D6B788E329BB47E700A41AE2 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B788E229BB47E700A41AE2 /* DBManager.swift */; };
 		D6B788E529BB484900A41AE2 /* DBStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B788E429BB484900A41AE2 /* DBStruct.swift */; };
 		D6B788E829BB608000A41AE2 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D6B788E729BB608000A41AE2 /* Realm */; };
 		D6B788EA29BB608000A41AE2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D6B788E929BB608000A41AE2 /* RealmSwift */; };
@@ -78,7 +77,6 @@
 		D6B788D229BB1BD700A41AE2 /* SHOWModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHOWModel.swift; sourceTree = "<group>"; };
 		D6B788DA29BB298E00A41AE2 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		D6B788DC29BB2B1A00A41AE2 /* CellRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellRow.swift; sourceTree = "<group>"; };
-		D6B788E229BB47E700A41AE2 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		D6B788E429BB484900A41AE2 /* DBStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBStruct.swift; sourceTree = "<group>"; };
 		D6C526B129BB7217007C5FDC /* StartAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAssignment.swift; sourceTree = "<group>"; };
 		F8CAF037BACEDFED230C995B /* Pods-SwiftUICognityAssignment-SwiftUICognityAssignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUICognityAssignment-SwiftUICognityAssignmentUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftUICognityAssignment-SwiftUICognityAssignmentUITests/Pods-SwiftUICognityAssignment-SwiftUICognityAssignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +127,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D6A21C1729BE8F4500E38609 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D673E1EE29BE02170034FF3D /* Helper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		D6B7889029BB18A500A41AE2 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +160,7 @@
 		D6B7889B29BB18A500A41AE2 /* SwiftUICognityAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				D6A21C1729BE8F4500E38609 /* Helper */,
 				D6B788E129BB47D100A41AE2 /* DBManager */,
 				D6B788CB29BB1A4000A41AE2 /* APIManager */,
 				D6B788CA29BB1A3800A41AE2 /* View */,
@@ -163,7 +170,6 @@
 				D6B788A029BB18A600A41AE2 /* Assets.xcassets */,
 				D6B788A229BB18A600A41AE2 /* Preview Content */,
 				D68C8D7029BB660E00438D8E /* LaunchScreen.storyboard */,
-				D673E1EE29BE02170034FF3D /* Helper.swift */,
 			);
 			path = SwiftUICognityAssignment;
 			sourceTree = "<group>";
@@ -232,7 +238,6 @@
 		D6B788E129BB47D100A41AE2 /* DBManager */ = {
 			isa = PBXGroup;
 			children = (
-				D6B788E229BB47E700A41AE2 /* DBManager.swift */,
 				D6B788E429BB484900A41AE2 /* DBStruct.swift */,
 			);
 			path = DBManager;
@@ -346,9 +351,9 @@
 			);
 			mainGroup = D6B7889029BB18A500A41AE2;
 			packageReferences = (
-				D6B788D429BB1CC200A41AE2 /* XCRemoteSwiftPackageReference "SwiftyJSON.git" */,
-				D6B788D729BB288E00A41AE2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI.git" */,
-				D6B788DE29BB3BA300A41AE2 /* XCRemoteSwiftPackageReference "realm-swift.git" */,
+				D6B788D429BB1CC200A41AE2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D6B788D729BB288E00A41AE2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				D6B788DE29BB3BA300A41AE2 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = D6B7889A29BB18A500A41AE2 /* Products */;
 			projectDirPath = "";
@@ -467,7 +472,6 @@
 				D6B788CD29BB1AD500A41AE2 /* SHOWViewModel.swift in Sources */,
 				D6B788DB29BB298E00A41AE2 /* DetailsView.swift in Sources */,
 				D6B7889F29BB18A500A41AE2 /* ContentView.swift in Sources */,
-				D6B788E329BB47E700A41AE2 /* DBManager.swift in Sources */,
 				D6C526B229BB7217007C5FDC /* StartAssignment.swift in Sources */,
 				D6B788D329BB1BD700A41AE2 /* SHOWModel.swift in Sources */,
 				D6B788D129BB1B2600A41AE2 /* APIManager.swift in Sources */,
@@ -802,7 +806,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D6B788D429BB1CC200A41AE2 /* XCRemoteSwiftPackageReference "SwiftyJSON.git" */ = {
+		D6B788D429BB1CC200A41AE2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
@@ -810,7 +814,7 @@
 				kind = branch;
 			};
 		};
-		D6B788D729BB288E00A41AE2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI.git" */ = {
+		D6B788D729BB288E00A41AE2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
@@ -818,7 +822,7 @@
 				minimumVersion = 2.0.0;
 			};
 		};
-		D6B788DE29BB3BA300A41AE2 /* XCRemoteSwiftPackageReference "realm-swift.git" */ = {
+		D6B788DE29BB3BA300A41AE2 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -831,22 +835,22 @@
 /* Begin XCSwiftPackageProductDependency section */
 		D6B788D529BB1CC200A41AE2 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D6B788D429BB1CC200A41AE2 /* XCRemoteSwiftPackageReference "SwiftyJSON.git" */;
+			package = D6B788D429BB1CC200A41AE2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
 		D6B788D829BB288E00A41AE2 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D6B788D729BB288E00A41AE2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI.git" */;
+			package = D6B788D729BB288E00A41AE2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
 		};
 		D6B788E729BB608000A41AE2 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D6B788DE29BB3BA300A41AE2 /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = D6B788DE29BB3BA300A41AE2 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
 		D6B788E929BB608000A41AE2 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D6B788DE29BB3BA300A41AE2 /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = D6B788DE29BB3BA300A41AE2 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
