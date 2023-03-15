@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
-
+import RealmSwift
 @main
-struct SwiftUICognityAssignmentApp: App {
+struct SwiftUICognityAssignmentApp: SwiftUI.App {
+ 
     var body: some Scene {
         WindowGroup {
             StartAssignment()
